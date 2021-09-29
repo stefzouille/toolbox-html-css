@@ -3,13 +3,139 @@
 
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="responsive-style.css" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RESPONSIVE DESIGN</title>
 </head>
 
 <body>
-  <H1>LE RESPONSIVE DESIGN AVEC MEDIA QUERIES</H1>
+  <header>
+    <nav>
+      <H1>LE RESPONSIVE DESIGN AVEC MEDIA QUERIES</H1>
+    </nav>
+    <p>Les media queries sont donc des règles qui indiquent quand on doit
+      appliquer des
+      propriétés CSS. Il y a deux façons de les utiliser :</p>
+    <ul>
+      <li>en chargeant une feuille de style .css différente en fonction de la
+        règle
+        (ex.
+        :
+        « Si la résolution est inférieure à 1 280 px de large, charge le fichier
+        petite_resolution.css ») ;</li></br>
+      <li>en écrivant la règle directement dans le fichier .css habituel (ex. :
+        « Si
+        la
+        résolution est inférieure à 1 280 px de large, charge les propriétés CSS
+        ci-dessous »).</p>
+      </li>
+    </ul>
+    <section>
+      <h2>Chargement d'une feuille de style différente</h2>
+      <article>
+        <p>Vous vous souvenez de la balise
+          link qui permet, dans notre code HTML, de charger un fichier .css
+          ? ---link rel="stylesheet" href="style.css" /---
+        </p> </br>
+        <p>On peut lui ajouter un attribut media , dans lequel on va écrire la
+          règle qui
+          doit s'appliquer pour que le fichier soit chargé.</br> On dit qu'on
+          fait
+          une «
+          requête de media » (media query en anglais).</br> Voici un exemple :
+          --link rel="stylesheet" media="screen and (max-width: 1280px)"
+          href="petite_resolution.css" /--</p>
+        <!-- <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="style.css" />  Pour tout le monde 
+        <link rel="stylesheet" media="screen and (max-width: 1280px)"
+          href="petite_resolution.css" />
+         Pour ceux qui ont une résolution inférieure à 1280px 
+        <title>Media queries</title>
+        </head> -->
+
+      </article>
+      <article>
+        <h3> Chargement des règles directement dans la feuille de style :</h3>
+
+        <p> Une autre technique, que je préfère personnellement pour des raisons
+          pratiques,</br>
+          consiste à écrire ces règles dans le même fichier CSS que d'habitude.
+          Dans ce cas, on écrit la règle dans le fichier .css comme ceci :</p>
+        @media screen and (max-width: 1280px)</br>
+        {</br>
+        /* Rédigez vos propriétés CSS ici */</br>
+        }</br>
+      </article>
+      <article>
+        <h3>Les régles disponibles</h3>
+        <p>color : gestion de la couleur (en bits/pixel) ;</br>
+
+          height : hauteur de la zone d'affichage (fenêtre) ;</br>
+
+          width : largeur de la zone d'affichage (fenêtre) ;</br>
+
+          device-height : hauteur du périphérique ;</br>
+
+          device-width : largeur du périphérique ;</br>
+
+          orientation : orientation du périphérique (portrait ou paysage) ;</br>
+
+          media : type d'écran de sortie. Quelques-unes des valeurs possibles
+          :</br>
+
+          screen : écran « classique »,</br>
+
+          handheld : périphérique mobile,</br>
+
+          print : impression,</br>
+
+          tv : télévision,</br>
+
+          projection : projecteur,</br>
+
+          all : tous les types d'écrans.</br>
+          </br>
+          On peut rajouter le préfixe min- ou max- devant la plupart de ces
+          règles. Ainsi,
+          min-width signifie « largeur minimale », max-height « hauteur maximale
+          », etc.</br>
+          La différence entre width et device-width se perçoit surtout sur les
+          navigateurs</br>
+          mobiles des smartphones ; nous en reparlerons plus loin.On peut
+          rajouter le préfixe min- ou max- devant la plupart de ces règles.</br>
+          Ainsi,
+          min-width signifie « largeur minimale », max-height « hauteur maximale
+          », etc.</br>
+          La différence entre width et device-width se perçoit surtout sur les
+          navigateurs
+          mobiles des smartphones ; nous en reparlerons plus loin.</p>
+
+        <!-- /* Sur les écrans, quand la largeur de la fenêtre fait au maximum 1280px */
+          @media screen and (max-width: 1280px)
+          
+          /* Sur tous types d'écran, quand la largeur de la fenêtre est comprise entre
+          1024px et 1280px */
+          @media all and (min-width: 1024px) and (max-width: 1280px)
+          
+          /* Sur les téléviseurs */
+          @media tv
+          
+          /* Sur tous types d'écrans orientés verticalement */
+          @media all and (orientation: portrait) -->
+      </article>
+      <p>Bonjour. Souhaitez-vous consulter la page <a
+          href="contenu/test_media_queries.html">tester les media queries</a> ?
+      </p>
+    </section>
+
+
+
+
+  </header>
 </body>
 
 </html>
