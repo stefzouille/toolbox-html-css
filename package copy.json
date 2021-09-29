@@ -1,0 +1,8 @@
+{
+  "name": "html-css",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "repository": "git@github.com:stefzouille/html_css_toolbox.git",
+  "author": "stefzouille <contact.lokcy@gmail.com>"
+}

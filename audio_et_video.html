@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>insérer audio et video en html</title>
+</head>
+
+<body>
+  <h1>INSERER AUDIO ET VIDEO</h1>
+  <H2>Les formats :</H2>
+  <p>Les formats audio :</br>
+    Pour diffuser de la musique ou n'importe quel son, il existe de nombreux
+    formats. La plupart d'entre eux sont compressés (comme le sont les images
+    JPEG,
+    PNG et GIF), ce qui permet de réduire leur poids :<br />
+
+    MP3 : vous ne pouvez pas ne pas en avoir entendu parler ! C'est l'un des
+    plus
+    vieux, mais aussi l'un des plus compatibles (tous les appareils savent lire
+    des
+    MP3), ce qui fait qu'il est toujours très utilisé aujourd'hui ;<br />
+
+    AAC : utilisé majoritairement par Apple sur iTunes, c'est un format de bonne
+    qualité. Les iPod, iPhone et autres iPad savent les lire sans problème
+    ;<br />
+
+    Ogg : le format Ogg Vorbis est très répandu dans le monde du logiciel libre,
+    notamment sous Linux. Ce format a l'avantage d'être libre, c'est-à-dire
+    qu'il
+    n'est protégé par aucun brevet ;<br />
+
+    WAV (format non compressé) : évitez autant que possible de l'utiliser car le
+    fichier est très volumineux avec ce format. C'est un peu l'équivalent du
+    Bitmap
+    (BMP) pour l'audio.<br />
+
+    La compatibilité dépend des navigateurs, mais elle évolue dans le bon sens
+    au
+    fil du temps. Pensez à consulter caniuse.com pour connaître la compatibilité
+    actuelle des MP3, AAC, Ogg, WAV...</p></br>
+
+  <p>Les formats vidéo :</br>
+    Le stockage de la vidéo est autrement plus complexe. On a besoin de trois
+    éléments :<br />
+
+    un format conteneur : c'est un peu comme une boîte qui va servir à contenir
+    les
+    deux éléments ci-dessous. On reconnaît en général le type de conteneur à
+    l'extension du fichier : AVI, MP4, MKV… ;<br />
+
+    un codec audio : c'est le format du son de la vidéo, généralement compressé.
+    Nous venons de les voir, on utilise les mêmes : MP3, AAC, OGG… ;<br />
+
+    un codec vidéo : c'est le format qui va compresser les images. C'est là que
+    les
+    choses se corsent, car ces formats sont complexes et on ne peut pas toujours
+    les
+    utiliser gratuitement. Les principaux à connaître pour le Web sont :<br />
+
+    H.264 : l'un des plus puissants et des plus utilisés aujourd'hui… mais il
+    n'est
+    pas 100 % gratuit. En fait, on peut l'utiliser gratuitement dans certains
+    cas
+    (comme la diffusion de vidéos sur un site web personnel), mais il y a un
+    flou
+    juridique qui fait qu'il est risqué de l'utiliser à tout va,<br />
+
+    Ogg Theora : un codec gratuit et libre de droits, mais moins puissant que
+    H.264.
+    Il est bien reconnu sous Linux mais, sous Windows, il faut installer des
+    programmes pour pouvoir le lire,<br />
+
+    WebM : un autre codec gratuit et libre de droits, plus récent. Proposé par
+    Google, c'est le concurrent le plus sérieux de H.264 à l'heure
+    actuelle.<br />
+
+    Là encore, surveillez bien la compatibilité sur caniuse.com : H.264, Ogg
+    Theora,
+    WebM... Le format H.264 semble sortir du lot. Il est quand même conseillé de
+    proposer si possible chaque vidéo dans plusieurs formats, pour qu'elle soit
+    lisible sur un maximum de navigateurs.<br />
+
+    Pour convertir une vidéo dans ces différents formats, je vous conseille
+    l'excellent logiciel gratuit Miro Video Converter.<br />
+
+    Il vous suffit de glisser-déposer votre vidéo dans la fenêtre du programme
+    et de
+    sélectionner le format de sortie souhaité. Cela vous permettra de créer
+    plusieurs versions de votre vidéo !</p>
+
+  <h2>Elements audio</h2>
+  <audio src="hype_home.mp3" controls></audio></br>
+  <!--Cela vous permet d'afficher un message ou de proposer une solution de secours 
+    pour les navigateurs qui ne gèrent pas cette nouvelle balise. Par exemple :-->
+  <audio src="hype_home.mp3" controls>Veuillez mettre à jour votre navigateur
+    !</audio>
+  <p>Vous pouvez compléter la balise des attributs suivants :<br />
+
+    controls : pour ajouter les boutons « Lecture », « Pause » et la barre de
+    défilement. Cela peut sembler indispensable,<br />et vous vous demandez
+    peut-être
+    pourquoi cela n'y figure pas par défaut, mais certains sites web préfèrent
+    créer
+    eux-mêmes leurs propres boutons et commander la lecture avec du JavaScript
+    ;<br />
+
+    width : pour modifier la largeur de l'outil de lecture audio ;
+    <br />
+    loop : la musique sera jouée en boucle ;<br />
+
+    autoplay : la musique sera jouée dès le chargement de la page (évitez d'en
+    abuser, c'est en général irritant d'arriver sur un site qui joue de la
+    musique
+    tout seul !) ;<br />
+
+    preload : indique si la musique peut être préchargée dès le chargement de la
+    page ou non. Cet attribut peut prendre les valeurs :<br />
+
+    auto (par défaut) : le navigateur décide s'il doit précharger toute la
+    musique,
+    uniquement les métadonnées ou rien du tout,<br />
+
+    metadata : charge uniquement les métadonnées (durée, etc.),<br />
+
+    none : pas de préchargement. Utile si vous ne voulez pas gaspiller de bande
+    passante sur votre site.
+  </p>
+  <p>si le navigateur ne gere pas le mp3?</p>
+  <audio controls>
+    <source src="hype_home.mp3">
+    <source src="hype_home.ogg">
+  </audio>
+
+  <h3>Insertion d une video</h3>
+  <p>Rajoutons quelques attributs (la plupart sont les mêmes que pour la balise
+    audio ) :</br>
+
+    poster : image à afficher à la place de la vidéo tant que celle-ci n'est
+    pas
+    lancée.</br> Par défaut, le navigateur prend la première image de la vidéo
+    mais,
+    comme il s'agit souvent d'une image noire ou d'une image peu
+    représentative de
+    la vidéo, je vous conseille d'en créer une ! </br>Vous pouvez tout
+    simplement
+    faire
+    une capture d'écran d'un moment de la vidéo.</br>
+
+    controls : pour ajouter les boutons « Lecture », « Pause » et la barre de
+    défilement. Cela peut sembler indispensable, mais certains sites web
+    préfèrent
+    créer eux-mêmes leurs propres boutons et commander la lecture avec du
+    JavaScript. En ce qui nous concerne, ce sera largement suffisant !</br>
+
+    width : pour modifier la largeur de la vidéo.</br>
+
+    height : pour modifier la hauteur de la vidéo.</br>
+
+    loop : la vidéo sera jouée en boucle.</br>
+
+    autoplay : la vidéo sera jouée dès le chargement de la page. Là encore,
+    évitez
+    d'en abuser, c'est en général irritant d'arriver sur un site qui lance
+    quelque
+    chose tout seul !</br>
+
+    preload : indique si la vidéo peut être préchargée dès le chargement de la
+    page ou non. Cet attribut peut prendre les valeurs :</br>
+
+    auto (par défaut) : le navigateur décide s'il doit précharger toute la
+    vidéo,
+    uniquement les métadonnées ou rien du tout ;</br>
+
+    metadata : charge uniquement les métadonnées (durée, dimensions, etc.)
+    ;</br>
+
+    none : pas de préchargement. Utile si vous souhaitez éviter le gaspillage
+    de
+    bande passante sur votre site.</br>
+
+    On ne peut pas forcer le préchargement de la vidéo, c'est toujours le
+    navigateur qui décide.
+  </p>
+  <video src="sintel.webm" controls poster="sintel.jpg" width="600"></video>
+
+
+  <p>Pourquoi ouvrir et refermer immédiatement après la balise ?</br>
+
+    La réponse est la même que pour la balise audio . Cela vous permet
+    d'afficher
+    un message </br>ou d'utiliser une technique de secours (en Flash) si le
+    navigateur
+    ne reconnaît pas la balise :</p>
+  <video src="sintel.webm" controls poster="sintel.jpg" width="600">
+    Il est temps de mettre à jour votre navigateur !
+  </video>
+  <p>Comment contenter tous les navigateurs, puisque chacun reconnaît des
+    formats
+    vidéo différents ?</br>
+
+    Vous utiliserez la balise
+    source à l'intérieur de la balise video pour proposer différents formats.
+    Le
+    navigateur prendra celui qu'il reconnaît :</p>
+  <video controls poster="sintel.jpg" width="600">
+    <source src="sintel.mp4">
+    <source src="sintel.webm">
+    <source src="sintel.ogv">
+  </video>
+  </br>
+  </br>
+  </br>
+</body>
+
+</html>

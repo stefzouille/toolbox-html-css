@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>openclassroom html & css</title>
+</head>
+
+<body>
+  <h1 id="page1">je suis la page sur les image .</h1>
+
+  <h2>miniature cliquable </h2>
+  <p>Bonjour. resize une image <a href="https://resizeimage.net/"
+      title="redimensionner une image !" target="_blank">resize images</a> ?
+  </p>
+
+  <p>
+    Vous souhaitez voir l'image dans sa taille d'origine ? Cliquez dessus
+    !<br />
+    <a href="img/montagne_maxi.jpg"><img src="img/montagne_mini.jpg"
+        alt="Photo de montagne"
+        title="Cliquez pour agrandir car ils sont 2 mr en rouge perdu maintenant" /></a>
+  </p>
+  <p>En HTML5, on dispose de la balise
+  <figure> . Voici comment on pourrait
+    l'utiliser :</p>
+
+    <p>
+    <figure>
+      <img src="images/blocnotes.png" alt="Bloc-Notes" />
+    </figure>
+    </p>
+    <p>/p>Une figure est le plus souvent accompagnée d'une légende. Pour ajouter
+      une
+      légende, utilisez la balise
+    <figcaption> à l'intérieur de la balise <figure>
+        ,
+        comme ceci : </p>
+
+        <figure>
+          <img src="images/blocnotes.png" alt="Bloc-Notes" />
+          <figcaption>Le logiciel Bloc-Notes</figcaption>
+        </figure>
+        Bien comprendre le rôle des figures
+        Un peu plus tôt dans ce chapitre, je vous ai dit que les images devaient
+        être situées dans des paragraphes (placées à l'intérieur d'une balise
+        <p>
+        </p> ). Ce n'est pas tout à fait vrai.
+
+        Si vous faites de votre image une figure, l'image peut être située
+        en-dehors d'un paragraphe.
+
+        <p>Connaissez-vous le logiciel Bloc-Notes ? On peut faire des sites web
+          avec !</p>
+
+        <figure>
+          <img src="images/blocnotes.png" alt="Bloc-Notes" />
+          <figcaption>Le logiciel Bloc-Notes</figcaption>
+        </figure>
+        Je ne vois pas vraiment de changement. Quand dois-je placer mon image
+        dans
+        un paragraphe et quand dois-je la placer dans une figure ?
+
+        Bonne question ! Tout dépend de ce que votre image apporte au texte :
+
+        Si elle n'apporte aucune information (c'est juste une illustration pour
+        décorer) : placez l'image dans un paragraphe.
+
+        Si elle apporte une information : placez l'image dans une figure.
+
+        La balise <figure> a un rôle avant tout sémantique. Cela veut dire
+          qu'elle
+          indique à l'ordinateur que l'image a du sens et qu'elle est importante
+          pour la bonne compréhension du texte. Cela peut permettre à un
+          programme
+          de récupérer toutes les figures du texte et de les référencer dans une
+          table des figures, par exemple.
+
+          Enfin, sachez qu'une figure peut très bien comporter plusieurs images.
+          Voici un cas où cela se justifie :
+
+          <figure>
+            <img src="images/internetexplorer.png"
+              alt="Logo Internet Explorer" />
+            <img src="images/firefox.png" alt="Logo Mozilla Firefox" />
+            <img src="images/chrome.png" alt="Logo Google Chrome" />
+            <figcaption>Logos des différents navigateurs</figcaption>
+          </figure>
+</body>
+
+</html>

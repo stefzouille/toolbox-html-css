@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>formulaire</title>
+</head>
+
+<body>
+  <h1>1- la balise</h1>
+  <p>Texte avant le formulaire</p>
+
+  <form method="post" action="traitement.php">
+    <p>Texte à l'intérieur du formulaire</p>
+  </form>
+
+  <p>Texte après le formulaire</p>
+  <!--formulaire simple-->
+  <p>zone monoligne</p>
+  <input type="text" name="pseudo" />
+
+  <!--formulaire simple-->
+
+  <form method="post" action="traitement.php">
+    <p>
+      <label for="pseudo">Votre pseudo</label> : <input type="text"
+        name="pseudo" id="pseudo" />
+    </p>
+  </form>
+
+  <!--formulaire simple + placeholder-->
+  <form method="post" action="traitement.php">
+    <p>
+      <label for="pseudo">Votre pseudo :</label>
+      <input type="text" name="pseudo" id="pseudo" placeholder="Ex : Zozor"
+        size="30" maxlength="10" />
+    </p>
+  </form>
+
+  <!--formulaire MDP-->
+  <form method="post" action="traitement.php">
+    <p>
+      <label for="pseudo">Votre pseudo :</label>
+      <input type="text" name="pseudo" id="pseudo" />
+
+      <br />
+      <label for="pass">Votre mot de passe :</label>
+      <input type="password" name="pass" id="pass" />
+
+    </p>
+  </form>
+
+  <!--formulaire zone texte multiligne-->
+  <form method="post" action="traitement.php">
+    <p>
+      <label for="ameliorer">Comment pensez-vous que je pourrais améliorer mon
+        site ?</label><br />
+      <textarea name="ameliorer" id="ameliorer"></textarea>
+    </p>
+  </form>
+  <form method="post" action="traitement.php">
+    <p>
+      <label for="ameliorer">
+        Comment pensez-vous que je puisse améliorer mon site ?
+      </label>
+      <br />
+
+      <textarea name="ameliorer" id="ameliorer" rows="10" cols="50">
+         Améliorer ton site ?!
+         Mais enfin ! Il est tellement génialissime qu'il n'est pas nécessaire de l'améliorer !
+         </textarea>
+    </p>
+  </form>
+
+  <!--formulaire zone de saisie enrichies-->
+  <input type="email" placeholder="Ex : email" /><br />
+  <input type="url" placeholder="Ex : url" /><br />
+  <input type="tel" placeholder="ex: telephone" /><br />
+  <input type="number" placeholder="ex: nombre" /><br />
+  <!--"ex: un curseur" -->
+  <input type="range" /><br />
+  <!--couleur-->
+  <input type="color" /><br />
+  <!--date-->
+  <input type="date" /><br />
+  <!--recherche-->
+  <input type="search" placeholder="ex: search" /><br />
+  <!--case a cocher-->
+  <input type="checkbox" name="choix" />
+  <form method="post" action="traitement.php">
+    <p>
+      Cochez les aliments que vous aimez manger :<br />
+      <input type="checkbox" name="frites" id="frites" /> <label
+        for="frites">Frites</label><br />
+      <input type="checkbox" name="steak" id="steak" /> <label for="steak">Steak
+        haché</label><br />
+      <input type="checkbox" name="epinards" id="epinards" /> <label
+        for="epinards">Epinards</label><br />
+      <input type="checkbox" name="huitres" id="huitres" /> <label
+        for="huitres">Huitres</label>
+    </p>
+  </form>
+  <!--une case soit cochée par défaut, avec l'attribut checked-->
+  <input type="checkbox" name="choix" checked />
+
+  <!--zones d options-->
+  <form method="post" action="traitement.php">
+    <p>
+      Veuillez indiquer la tranche d'âge dans laquelle vous vous situez :<br />
+      <input type="radio" name="age" value="moins15" id="moins15" /> <label
+        for="moins15">Moins de 15 ans</label><br />
+      <input type="radio" name="age" value="medium15-25" id="medium15-25" />
+      <label for="medium15-25">15-25 ans</label><br />
+      <input type="radio" name="age" value="medium25-40" id="medium25-40" />
+      <label for="medium25-40">25-40 ans</label><br />
+      <input type="radio" name="age" value="plus40" id="plus40" /> <label
+        for="plus40">Encore plus vieux que ça ?!</label>
+    </p>
+  </form>
+  <!--deux zones d'options différentes, il faut donner un name  unique à chaque groupe, comme ceci-->
+  <form method="post" action="traitement.php">
+    <p>
+      Veuillez indiquer la tranche d'âge dans laquelle vous vous situez :<br />
+      <input type="radio" name="age" value="moins15" id="moins15" /> <label
+        for="moins15">Moins de 15 ans</label><br />
+      <input type="radio" name="age" value="medium15-25" id="medium15-25" />
+      <label for="medium15-25">15-25 ans</label><br />
+      <input type="radio" name="age" value="medium25-40" id="medium25-40" />
+      <label for="medium25-40">25-40 ans</label><br />
+      <input type="radio" name="age" value="plus40" id="plus40" /> <label
+        for="plus40">Encore plus vieux que ça ?!</label>
+    </p>
+    <p>
+      Sur quel continent habitez-vous ?<br />
+      <input type="radio" name="continent" value="europe" id="europe" /> <label
+        for="europe">Europe</label><br />
+      <input type="radio" name="continent" value="afrique" id="afrique" />
+      <label for="afrique">Afrique</label><br />
+      <input type="radio" name="continent" value="asie" id="asie" /> <label
+        for="asie">Asie</label><br />
+      <input type="radio" name="continent" value="amerique" id="amerique" />
+      <label for="amerique">Amérique</label><br />
+      <input type="radio" name="continent" value="australie" id="australie" />
+      <label for="australie">Australie</label>
+    </p>
+  </form>
+  <!--listes deroulantes-->
+  <form method="post" action="traitement.php">
+    <p>
+      <label for="pays">Dans quel pays habitez-vous ?</label><br />
+      <select name="pays" id="pays">
+        <option value="france">France</option>
+        <option value="espagne">Espagne</option>
+        <option value="italie">Italie</option>
+        <option value="royaume-uni">Royaume-Uni</option>
+        <option value="canada">Canada</option>
+        <option value="etats-unis">États-Unis</option>
+        <option value="chine">Chine</option>
+        <option value="japon">Japon</option>
+      </select>
+    </p>
+    <!--une option soit sélectionnée par défaut, utilisez cette fois l'attribut selected-->
+    <option value="canada" selected>Canada</option>
+    <!--grouper vos options avec la balise <optgroup> </optgroup> pourquoi ne pas séparer les pays en fonction de leur continent ?-->
+    <form method="post" action="traitement.php">
+      <p>
+        <label for="pays">Dans quel pays habitez-vous ?</label><br />
+        <select name="pays" id="pays">
+          <optgroup label="Europe">
+            <option value="france">France</option>
+            <option value="espagne">Espagne</option>
+            <option value="italie">Italie</option>
+            <option value="royaume-uni">Royaume-Uni</option>
+          </optgroup>
+          <optgroup label="Amérique">
+            <option value="canada">Canada</option>
+            <option value="etats-unis">Etats-Unis</option>
+          </optgroup>
+          <optgroup label="Asie">
+            <option value="chine">Chine</option>
+            <option value="japon">Japon</option>
+          </optgroup>
+        </select>
+      </p>
+    </form>
+  </form>
+
+  <!--finaliser et envoyer le formulaire-->
+  <!-- <p>Si votre formulaire grossit et comporte beaucoup de champs, il peut être
+    utile
+    de les regrouper au sein de plusieurs balises
+  <fieldset> . Chaque <fieldset>
+      peut contenir une légende avec la balise <legend> . Regardez cet exemple :
+        </p> -->
+  <form method="post" action="traitement.php">
+
+    <fieldset>
+      <legend>Vos coordonnées</legend> <!-- Titre du fieldset -->
+
+      <label for="nom">Quel est votre nom ?</label>
+      <input type="text" name="nom" id="nom" />
+
+      <label for="prenom">Quel est votre prénom ?</label>
+      <input type="text" name="prenom" id="prenom" />
+
+      <label for="email">Quel est votre e-mail ?</label>
+      <input type="email" name="email" id="email" />
+
+    </fieldset>
+
+    <fieldset>
+      <legend>Votre souhait</legend> <!-- Titre du fieldset -->
+
+      <p>
+        Faites un souhait que vous voudriez voir exaucé :
+
+        <input type="radio" name="souhait" value="riche" id="riche" />
+        <label for="riche">Etre riche</label>
+        <input type="radio" name="souhait" value="celebre" id="celebre" />
+        <label for="celebre">Etre célèbre</label>
+        <input type="radio" name="souhait" value="intelligent"
+          id="intelligent" />
+        <label for="intelligent">Etre <strong>encore</strong> plus
+          intelligent</label>
+        <input type="radio" name="souhait" value="autre" id="autre" />
+        <label for="autre">Autre...</label>
+      </p>
+
+      <p>
+        <label for="precisions">Si "Autre", veuillez préciser :</label>
+        <textarea name="precisions" id="precisions" cols="40"
+          rows="4"></textarea>
+      </p>
+    </fieldset>
+  </form>
+
+  <!--Sélectionner automatiquement un champ-->
+  <input type="text" name="prenom" id="prenom" autofocus />
+  </br>
+  <!--champs obligatoire-->
+  <input type="text" name="prenom" id="prenom" required />
+
+  <!--le bouton d envoie-->
+  <!-- <p>Il ne nous reste plus qu'à créer le bouton d'envoi. Là encore, la balise
+    <input /> vient à notre secours. Elle existe en quatre versions :
+
+    type="submit" : le principal bouton d'envoi de formulaire. C'est celui que
+    vous
+    utiliserez le plus souvent. Le visiteur sera conduit à la page indiquée dans
+    l'attribut action du formulaire ;
+
+    type="reset" : remise à zéro du formulaire ;
+
+    type="image" : équivalent du bouton submit , présenté cette fois sous forme
+    d'image. Rajoutez l'attribut src pour indiquer l'URL de l'image ;
+
+    type="button" : bouton générique, qui n'aura (par défaut) aucun effet. En
+    général, ce bouton est géré en JavaScript pour exécuter des actions sur la
+    page.
+    Nous ne l'utiliserons pas ici.
+
+    On peut changer le texte affiché à l'intérieur des boutons avec l'attribut
+    value
+  </p> --></br>
+  <input type="submit" value="Envoyer" />
+
+
+</body>
+
+</html>
