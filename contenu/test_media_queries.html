@@ -3,7 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="/responsive-style.css" />
+  <!--<link rel="stylesheet" href="/responsive-style.css" />-->
+  <link rel="stylesheet" media="screen and (max-width: 1280px)"
+    href="test_media_queries.css" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RESPONSIVE DESIGN </title>
@@ -13,6 +15,14 @@
   <div class="container">
     <div class="row">
       <h1>TESTER LES MEDIAS QUERIES</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Accueil</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">CV</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
       <P>Les media queries sont surtout utilisées pour adapter le design du site
         aux
         différentes largeurs d'écran.
@@ -25,6 +35,116 @@
         directement
         dans le même fichier .css que d'habitude :</P>
     </div>
+    <h2>Les menus de navigations</h2>
+    <p>Nous voulons que le menu de navigation prenne moins de place sur les
+      petites
+      résolutions. </br>Plutôt que de lui donner une dimension fixe, nous allons
+      lui
+      redonner sa dimension automatique flexible d'origine.</br> Chaque élément
+      du menu
+      s'écrira en dessous du précédent : pour cela, nous demandons à ce que les
+      éléments de la Flexbox soient organisés en colonne.</br>
+
+      Enfin, le texte sera écrit plus petit et nous retirons la bordure en bas
+      des
+      liens lors du survol, </br>car elle est moins adaptée à cette disposition.
+    </p>
+
+    <!-- @media all and (max-width: 1024px)
+          {
+          nav
+          {
+          width: auto;
+          text-align: left;
+          }
+
+          nav ul
+          {
+          flex-direction: column;
+          }
+
+          nav li
+          {
+          padding-left: 4px;
+          }
+
+          nav a
+          {
+          font-size: 1.1em;
+          }
+
+          nav a:hover
+          {
+          border-bottom: 0;
+          }
+          } -->
+    <h2>La bannière</h2>
+    <p>Pour retirer la bannière, rien de plus simple : </br>nous utilisons la
+      propriété
+      display , à laquelle nous affectons la valeur none .</br> Si la fenêtre
+      est trop
+      petite, nous préférons masquer complètement la bannière :</p>
+
+    <h2>Le bloc « À propos de l'auteur »</h2>
+    <p>Plutôt que de placer ce bloc à droite de l'article, nous allons le faire
+      passer
+      en dessous grâce à des Flexbox en colonne.</br> Ce type de disposition «
+      de haut en
+      bas » est plus adapté aux petits écrans.</br>
+
+      À l'intérieur du bloc, nous réajustons un peu la position des éléments :
+      </br>la
+      photo de Zozor, notamment, sera placée en flottant à droite.</p>
+
+    <!-- @media all and (max-width: 1024px)
+      {
+      section
+      {
+      flex-direction: column;
+      }
+      
+      article, aside
+      {
+      width: auto;
+      margin-bottom: 15px;
+      }
+      
+      #fleche_bulle
+      {
+      display: none;
+      }
+      
+      #photo_zozor img
+      {
+      width: 110px;
+      float: right;
+      margin-left: 15px;
+      }
+      
+      aside p:last-child
+      {
+      text-align: center;
+      }
+      } -->
+
+    <p>Que signifie aside p:last-child ? </br>
+
+      C'est un sélecteur avancé que nous n'avons pas utilisé jusqu'ici.</br>
+      aside p
+      signifie « Tous les paragraphes à l'intérieur de la balise
+      aside ».</br> Avec
+      :last-child , on cible uniquement le dernier paragraphe dans le bloc
+      aside</br>
+      (celui qui contient les liens vers Facebook et Twitter), pour pouvoir
+      centrer
+      les images.</br> Bien entendu, on aurait aussi pu affecter une class ou un
+      id à
+      ce
+      paragraphe pour le cibler directement, </br>mais je n'ai pas voulu
+      modifier le
+      code
+      HTML.</p>
+
   </div>
 
 </body>

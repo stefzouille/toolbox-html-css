@@ -1,0 +1,20 @@
+* {
+  margin-left: 10px;
+}
+
+/* @media all and (max-device-width: 480px) {
+  /* Vos règles CSS pour les mobiles ici */
+  #bloc_page {
+    width: auto;
+  }
+} */
+
+#bloc_page {
+  width: 900px;
+  margin: auto;
+}
+@media all and (max-width: 1024px) {
+  #bloc_page {
+    width: auto;
+  }
+}

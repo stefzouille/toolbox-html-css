@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="FR">
+
+<head>
+  <meta charset="UTF-8">
+  <!--<link rel="stylesheet" href="/responsive-style.css" />-->
+  <link rel="stylesheet" media="screen and (max-width: 1280px)"
+    href="media-navi-mobile.css" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RESPONSIVE DESIGN </title>
+</head>
+
+<body>
+  <div id="#bloc_page">
+    <h1>SUR NAVIGATEUR mobiles</h1>
+    <P>Comme vous le savez sûrement, les écrans des smartphones sont beaucoup
+      moins
+      larges que nos écrans habituels </br>(seulement quelques centaines de
+      pixels
+      de
+      large).</br>
+      Pour s'adapter, les navigateurs mobiles affichent le site en « dézoomant
+      », ce qui permet d'avoir un aperçu de l'ensemble de la page.</br>
+      La zone d'affichage
+      simulée est appelée le viewport: c'est la largeur de la fenêtre du
+      navigateur
+      sur le mobile.</br>
+
+      En CSS, avec les media queries, si vous ciblez l'écran avec max-width sur
+      un
+      mobile, </br>
+      celui-ci va comparer la largeur que vous indiquez avec celle de son
+      viewport. </br>
+      Le problème, c'est que le viewport change selon le navigateur mobile
+      utilisé !</P>
+    <p>Opera Mobile -- 850 pixels </br>
+
+      iPhone Safari -- 980 pixels </br>
+
+      Android -- 800 pixels </br>
+
+      Windows Phone -- 1 024 pixels</p> </br>
+
+    <p>Un iPhone se comporte comme si la fenêtre faisait 980 px de large, </br>
+      tandis qu'un
+      Android se comporte comme si la fenêtre faisait 800 px !</br>
+
+      Pour cibler les smartphones, plutôt que d'utiliser max-width , </br>
+      il peut être
+      intéressant de recourir à max-device-width : c'est la largeur du
+      périphérique.</br>
+      Les périphériques mobiles ne dépassant pas 480 px de large, </br>
+      on pourra viser
+      uniquement les navigateurs mobiles avec cette media query :</p>
+    <section>
+      <p>Vous pouvez modifier la largeur viewport du navigateur mobile avec une
+        balise
+        meta à insérer dans l'en-tête ( head ) du document :</p>
+      <!-- <meta name="viewport" content="width=320" /> -->
+
+      <p>Vous pouvez utiliser cette balise pour modifier la façon dont le
+        contenu
+        de
+        votre page s'organise sur les mobiles.</br>
+        Pour obtenir un rendu facile à lire, sans
+        zoom, vous pouvez demander à ce que le viewport soit le même que la
+        largeur de
+        l'écran :</p>
+      <!-- <meta name="viewport" content="width=device-width" /> -->
+    </section>
+  </div>
+</body>
+</br>
+
+</html>
