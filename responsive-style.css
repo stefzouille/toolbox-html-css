@@ -2,6 +2,18 @@
   margin-left: 10px;
 }
 
+#bloc_page {
+  width: 900px;
+  margin: auto;
+}
+/* responsive pour la page entiere media queries*/
+/* La règle signifie : « Pour tous les types d'écrans, si la largeur de la fenêtre ne dépasse pas 1 024 px, alors exécuter les règles CSS suivantes ». */
+@media all and (max-width: 1024px) {
+  #bloc_page {
+    width: auto;
+  }
+}
+
 /* Paragraphes en bleu par défaut */
 p {
   color: blue;
