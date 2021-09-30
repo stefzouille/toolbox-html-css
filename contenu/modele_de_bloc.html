@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/style.css" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>modéles de block en html</title>
+</head>
+
+<body>
+  <header>
+    <h1>Les modéles de boites / blocks.</h1>
+  </header>
+  <div>
+    <h3>Les balises de type block et inline</h3>
+    <p>En HTML, la plupart des balises peuvent se ranger dans l'une ou l'autre
+      de deux
+      catégories : <br>
+      <br>
+      les balises inline : c'est le cas par exemple des liens &lt;a>&lt;/a> .
+      <br>
+      <br>
+      les balises block : c'est le cas par exemple des paragraphes &lt;p>&lt;/p>
+      .
+    </p> <br>
+    <br>
+    <p>block : <br> une balise de type block sur votre page web crée
+      automatiquement un
+      retour à la ligne avant et après. <br>
+      Il suffit d'imaginer tout simplement un bloc. <br>
+      Votre page web sera en fait constituée d'une série de blocs les uns à la
+      suite
+      des autres. <br> Mais vous verrez qu'en plus, il est possible de mettre un
+      bloc à
+      l'intérieur d'un autre, <br> ce qui va augmenter considérablement nos
+      possibilités
+      pour créer le design de notre site ! <br>
+      <br>
+
+      inline : <br> une balise de type inline se trouve obligatoirement à
+      l'intérieur d'une
+      balise block. <br> Une balise inline ne crée pas de retour à la ligne,
+      <br> le texte qui
+      se trouve à l'intérieur s'écrit donc à la suite du texte précédent, <br>
+      sur la même
+      ligne (c'est pour cela que l'on parle de balise « en ligne »).
+    </p> <br>
+    <img src="/images/modèle des boîtes .jpg" alt="Photo des blocks"
+      title="emboitement des blocks " />
+  </div>
+  <div>
+    <h3>Les balises universelles</h3>
+    <p>Vous les connaissez déjà car je vous les ai présentées il y a quelques
+      chapitres. <br> Ce sont des balises qui n'ont aucun sens particulier
+      (contrairement à
+      &lt;p> qui veut dire « paragraphe » ,&lt;strong> , « import‌ant », etc.).
+      <br>
+      Le principal intérêt de ces balises est que l'on peut leur appliquer une
+      class (ou un id ) <br> pour le CSS quand aucune autre balise ne convient.
+      <br>
+
+      Il existe deux balises génériques et, comme par hasard, <br> la seule
+      différence
+      entre les deux est que l'une d'elle est inline et l'autre est block :
+    </p>
+    <p>1 - &lt;span><&lt; /span> (inline) ;</p>
+    <p>2 - &lt;div>&lt;/div> (block).</p>
+  </div>
+  <div>
+    <h3>Les dimensions</h3>
+    <p>Contrairement à un inline, un bloc a des dimensions précises. Il possède
+      une
+      largeur et une hauteur. <br> Ce qui fait, ô surprise, qu'on dispose de
+      deux
+      propriétés CSS : <br>
+      <br>
+      width : <br> c'est la largeur du bloc. À exprimer en pixels (px) ou en
+      pourcentage
+      (%) ; <br>
+      <br>
+      height : <br> c'est la hauteur du bloc. Là encore, on l'exprime soit en
+      pixels
+      (px),
+      soit en pourcentage (%).br
+      <br>
+      Pour être exact, width et height représentent la largeur et la hauteur du
+      contenu des blocs. <br> Si le bloc a des marges (on va découvrir ce
+      principe un
+      peu
+      plus loin), <br> celles-ci s'ajouteront à la largeur et à la hauteur.
+    </p>
+  </div>
+  <div>
+    <h3>Minimum et maximum</h3>
+    <p>On peut demander à ce qu'un bloc ait des dimensions minimales et
+      maximales. <br>
+      C'est très pratique, car cela nous permet de définir des dimensions «
+      limites » <br>
+      pour que notre site s'adapte aux différentes résolutions d'écran de nos
+      visiteurs : <br>
+      <br>
+      min-width : largeur minimale ;
+      <br>
+      min-height : hauteur minimale ;
+      <br>
+      max-width : largeur maximale ;
+      <br>
+      max-height : hauteur maximale. <br>
+      <br>
+      Par exemple, on peut demander à ce que les paragraphes occupent 50 % de la
+      largeur <br> et exiger qu'il fassent au moins 400 pixels de large dans
+      tous les
+      cas :
+    </p>
+    p
+    { <br>
+    width: 50%;<br>
+    min-width: 400px;<br>
+    } <br>
+  </div>
+  <div>
+    <h3>Les marges</h3>
+    <p>Il faut savoir que tous les blocs possèdent des marges. <br> Il existe
+      deux types de
+      marges : <br>
+      <br>
+      les marges intérieures ;<br>
+      <br>
+      les marges extérieures.
+    </p>
+    <img src="/images/marges.jpg"
+      alt="Photo des marges intérieurs et extérieures"
+      title="les marges des blocks " />
+    <p>Sur ce bloc, j'ai mis une bordure pour qu'on repère mieux ses frontières.
+      <br>
+
+      L'espace entre le texte et la bordure est la marge intérieure (en vert).
+      <br>
+
+      L'espace entre la bordure et le bloc suivant est la marge extérieure (en
+      rouge). <br>
+
+      En CSS, on peut modifier la taille des marges avec les deux propriétés
+      suivantes
+      : <br>
+      <br>
+      padding : <br> indique la taille de la marge intérieure. À exprimer en
+      général en
+      pixels (px) ;<br>
+      <br>
+      margin : <br> indique la taille de la marge extérieure. Là encore, on
+      utilise le plus
+      souvent des pixels. <br>
+      <br>
+      Les balises de type inline possèdent également des marges. <br> Vous
+      pouvez donc
+      aussi essayer ces manipulations sur ce type de balises.
+    </p>
+    <p>Pour bien voir les marges, prenons deux paragraphes auxquels j'applique
+      simplement une petite bordure (figure suivante) :</p>
+    p
+    { <br>
+    width: 350px;<br>
+    border: 1px solid black;<br>
+    text-align: justify;<br>
+    }<br>
+    <br>
+    <img src="/images/test_marges.jpg" alt="Photo des marges"
+      title="contour des blocks avec une bordure " />
+    <br>
+    <p>Comme vous pouvez le constater, il n'y a par défaut pas de marge
+      intérieure (
+      padding ). <br> En revanche, il y a une marge extérieure ( margin ).<br>
+      C'est cette
+      marge qui fait que deux paragraphes ne sont pas collés et qu'on a
+      l'impression
+      de « sauter une ligne ».<br>
+      <br>
+      Les marges par défaut ne sont pas les mêmes pour toutes les balises de
+      type
+      block.<br> Essayez d'appliquer ce CSS à des balises &lt;div> qui
+      contiennent du texte,<br>
+      par exemple : vous verrez que, dans ce cas, il n'y a par défaut ni marge
+      intérieure, ni marge extérieure !
+    </p>
+  </div>
+  <div>
+    <p>Supposons que je veuille rajouter une marge intérieure de 12 px aux
+      paragraphes
+      (figure suivante) :</p>
+    p
+    { <br>
+    width: 350px;<br>
+    border: 1px solid black;<br>
+    text-align: justify;<br>
+    padding: 12px; /* Marge intérieure de 12px */<br>
+    }<br>
+    <img src="/images/test_marges1.jpg" alt="Photo des marges"
+      title="contour des blocks avec une bordure " /> <br>
+    <br>
+    <p>Maintenant, je veux que mes paragraphes soient plus espacés entre eux.
+      <br> Je
+      rajoute la propriété margin <br> pour demander à ce qu'il y ait 50 px de
+      marge entre
+      deux paragraphes (figure suivante) :
+    </p>
+    p
+    { <br>
+    width: 350px;<br>
+    border: 1px solid black;<br>
+    text-align: justify;<br>
+    padding: 12px;<br>
+    margin: 50px; /* Marge extérieure de 50px */<br>
+    }<br>
+    <br>
+    <p>Voici la liste pour margin :<br>
+      <br>
+      margin-top : marge extérieure en haut ;<br>
+      <br>
+      margin-bottom : marge extérieure en bas ;<br>
+      <br>
+      margin-left : marge extérieure à gauche ;<br>
+      <br>
+      margin-right : marge extérieure à droite.<br>
+      <br>
+      <br>
+      Et la liste pour padding :<br>
+      <br>
+      padding-top : marge intérieure en haut ;<br>
+      <br>
+      padding-bottom : marge intérieure en bas ;<br>
+      <br>
+      padding-left : marge intérieure à gauche ;<br>
+      <br>
+      padding-right : marge intérieure à droite.
+    </p>
+    <br>
+    <p>Il y a d'autres façons de spécifier les marges avec les propriétés margin
+      et
+      padding . Par exemple :<br>
+      <br>
+      margin: 2px 0 3px 1px; signifie « 2 px de marge en haut, 0 px à droite (le
+      px
+      est facultatif dans ce cas), 3 px en bas, 1 px à gauche ».<br>
+      <br>
+      Autre notation raccourcie :<br> margin: 2px 1px; signifie « 2 px de marge
+      en haut et
+      en bas, 1 px de marge à gauche et à droite ».
+    </p>
+  </div>
+  <div>
+    <h3>Centrer des blocs</h3>
+    <p>Pour centrer, il faut respecter les règles suivantes : <br>
+      <br>
+      donnez une largeur au bloc (avec la propriété width ) ;<br>
+      <br>
+      indiquez que vous voulez des marges extérieures automatiques, comme ceci
+      :<br>
+      margin: auto; .<br>
+      <br>
+      Essayons cette technique sur nos petits paragraphes (lignes 3 et 4) :
+    </p>
+    p
+    { <br>
+    width: 350px; /* On a indiqué une largeur (obligatoire) */<br>
+    margin: auto; /* On peut donc demander à ce que le bloc soit centré avec
+    auto */<br>
+    border: 1px solid black;<br>
+    text-align: justify;<br>
+    padding: 12px;<br>
+    margin-bottom: 20px;<br>
+    }<br>
+  </div>
+  <div>
+    <h3>Quand ça dépasse</h3>
+    <p>overflow : couper un bloc <br>
+      Supposons que vous ayez un long paragraphe et que vous vouliez <br>
+      (pour une raison
+      qui ne regarde que vous) qu'il fasse 250 px de large et 110 px de
+      haut.<br>
+      Ajoutons-lui une bordure et remplissons-le de texte… à ras-bord (figure
+      suivante) :</p>
+    p
+    {<br>
+    width: 250px;<br>
+    height: 110px;<br>
+    text-align: justify;<br>
+    border: 1px solid black;<br>
+    }<br>
+    <br>
+    <p>Horreur ! Le texte dépasse des limites du paragraphe !<br>
+      <br>
+      Eh oui ! Vous avez demandé des dimensions précises, vous les avez eues !
+      Mais…
+      le texte ne tient pas à l'intérieur d'un si petit bloc.<br>
+
+      Si vous voulez que le texte ne dépasse pas des limites du paragraphe, il
+      va
+      falloir utiliser la propriété overflow . Voici les valeurs qu'elle peut
+      accepter
+      :<br>
+      <br>
+      visible (par défaut) :<br> si le texte dépasse les limites de taille, il
+      reste
+      visible et sort volontairement du bloc ;<br>
+      <br>
+      hidden :<br> si le texte dépasse les limites, il sera tout simplement
+      coupé. On ne
+      pourra pas voir tout le texte ;<br>
+      <br>
+      scroll : <br>là encore, le texte sera coupé s'il dépasse les limites.<br>
+      Sauf que cette
+      fois, <br>le navigateur mettra en place des barres de défilement pour
+      qu'on puisse
+      lire l'ensemble du texte.<br> C'est un peu comme un cadre à l'intérieur de
+      la page.<br>
+      <br>
+      auto : <br>c'est le mode « pilote automatique ».<br> En gros, c'est le
+      navigateur qui
+      décide de mettre ou non des barres de défilement <br>(il n'en mettra que
+      si c'est
+      nécessaire).<br> C'est la valeur que je conseille d'utiliser le plus
+      souvent.
+    </p>
+    <p>Essayons maintenant overflow:<br> auto; avec le code CSS suivant
+      (résultat à la
+      figure suivante) :</p>
+    p
+    {<br>
+    width: 250px;<br>
+    height: 110px;<br>
+    text-align: justify;<br>
+    border: 1px solid black;<br>
+    overflow: auto;<br>
+    }<br>
+    <img src="/images/overflow_auto.jpg" alt="Photo de overflow_auto"
+      title="avec un curseur " />
+  </div>
+  <div>
+    <h3>word-wrap : couper les textes trop larges</h3>
+    <p>L'ordinateur ne sait pas « couper » l'adresse car il n'y a ni espace, ni
+      tiret. <br>
+      Il ne sait pas faire la césure.<br>
+      <br>
+      Avec le code suivant, la césure sera forcée dès que le texte risque de
+      dépasser
+      (figure suivante).
+    </p>
+    p
+    { <br>
+    word-wrap: break-word;<br>
+    }<br>
+  </div>
+  <br>
+  <br>
+  <br>
+
+</body>
+
+</html>
